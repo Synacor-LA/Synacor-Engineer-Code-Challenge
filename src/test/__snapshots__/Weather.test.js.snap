@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weather tests matches snapshot based on dummy data 1`] = `
+Array [
+  <div
+    id="city"
+  >
+    Marina del Rey
+  </div>,
+  <div
+    id="temperature"
+  >
+    55° F
+  </div>,
+  <img
+    alt="light rain"
+    id="icon"
+    src="http://openweathermap.org/img/w/10n.png"
+  />,
+  <div
+    id="main-conditions"
+  >
+    Rain
+  </div>,
+  <p
+    id="blurb"
+  >
+    <strong>
+       Marina del Rey 
+    </strong>
+    is currently experiencing
+    <strong>
+       light rain
+    </strong>
+    . It is a cool 55 degrees, with a humidity of 66.
+  </p>,
+]
+`;
