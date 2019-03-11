@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App tests matches initial snapshot for "loading..." placeholder 1`] = `
+<div
+  id="content"
+>
+  Loading...
+</div>
+`;
+
+exports[`App tests matches snapshot after API calls 1`] = `
+<App>
+  <div
+    id="content"
+  >
+    <h1>
+      CURRENT CONDITIONS FOR
+    </h1>
+    <Weather
+      weatherData={
+        Object {
+          "base": "stations",
+          "clouds": Object {
+            "all": 40,
+          },
+          "cod": 200,
+          "coord": Object {
+            "lat": 34,
+            "lon": -118.43,
+          },
+          "dt": 1552267336,
+          "id": 5370542,
+          "main": Object {
+            "humidity": 66,
+            "pressure": 1014,
+            "temp": 285.74,
+            "temp_max": 288.71,
+            "temp_min": 282.59,
+          },
+          "name": "Marina del Rey",
+          "rain": Object {
+            "1h": 0.96,
+          },
+          "sys": Object {
+            "country": "US",
+            "id": 5872,
+            "message": 0.0109,
+            "sunrise": 1552313376,
+            "sunset": 1552355896,
+            "type": 1,
+          },
+          "visibility": 16093,
+          "weather": Array [
+            Object {
+              "description": "light rain",
+              "icon": "10n",
+              "id": 500,
+              "main": "Rain",
+            },
+          ],
+          "wind": Object {
+            "deg": 250,
+            "speed": 3.1,
+          },
+        }
+      }
+    >
+      <div
+        id="city"
+      >
+        Marina del Rey
+      </div>
+      <div
+        id="temperature"
+      >
+        55° F
+      </div>
+      <img
+        alt="light rain"
+        id="icon"
+        src="http://openweathermap.org/img/w/10n.png"
+      />
+      <div
+        id="main-conditions"
+      >
+        Rain
+      </div>
+      <p
+        id="blurb"
+      >
+        <strong>
+           Marina del Rey 
+        </strong>
+        is currently experiencing
+        <strong>
+           light rain
+        </strong>
+        . It is a cool 55 degrees, with a humidity of 66.
+      </p>
+    </Weather>
+  </div>
+</App>
+`;

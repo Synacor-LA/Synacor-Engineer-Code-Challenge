@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100vh;
+  min-height: 250px;
+}
+
+h1 {
+  font-size: 5vmin;
+}
+
+#app {
+  height: 100%;
+  border: 3px solid black;
+}
+
+#content {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#content > div {
+  font-size: 6vmin;
+}
+
+/* balance between blurriness and matching the mock */
+#icon {
+  height: 10vh;
+  max-height: 120px;
+  min-height: 50px;
+}

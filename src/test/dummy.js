@@ -1,0 +1,22 @@
+export default {
+  coord: { lon: -118.43, lat: 34 },
+  weather: [{ id: 500, main: 'Rain', description: 'light rain', icon: '10n' }],
+  base: 'stations',
+  main: { temp: 285.74, pressure: 1014, humidity: 66, temp_min: 282.59, temp_max: 288.71 },
+  visibility: 16093,
+  wind: { speed: 3.1, deg: 250 },
+  rain: { '1h': 0.96 },
+  clouds: { all: 40 },
+  dt: 1552267336,
+  sys: {
+    type: 1,
+    id: 5872,
+    message: 0.0109,
+    country: 'US',
+    sunrise: 1552313376,
+    sunset: 1552355896,
+  },
+  id: 5370542,
+  name: 'Marina del Rey',
+  cod: 200,
+};
