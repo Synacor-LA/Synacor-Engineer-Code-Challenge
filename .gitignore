@@ -4,6 +4,7 @@
 /build
 /dist
 /test-reports
+/coverage
 .DS_Store
 *.log
 yarn.lock

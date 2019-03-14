@@ -1,7 +1,8 @@
 # Synacor Los Angeles Engineer II Code Challenge
 
-Welcome to the Synacor LA coding challenge! In this repo you'll find [instructions](Instructions.md) for the site we'd like you to create. We've tried to be conscious of your time, so this should be a fairly quick project.
+Submission by Kyle Mayer on 3.14.19
 
-To complete the challenge, make a PR against this repo with your challenge code.
-
-Thanks for applying to Synacor!
+Notes:
+- This package should be locally from node using "npm start" due to ES6 modules not allowing CORS requests
+- This package uses ES6 import modules by default but fallback code is provided
+- The only dependencies are Babel Transform for ES6 modules (for Jest), Jest, and Express

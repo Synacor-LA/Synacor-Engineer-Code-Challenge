@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- By Kyle Mayer completed on 3.13.2019 -->
+<head>
+  <!-- This is boilerplate HTML from Visual Studio Code -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SynaWeather</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css">
+</head>
+<body>
+  <!-- Opted to use ID selectors for all significant DOM elements -->
+  <!-- See stylesheet comments for explanation of CSS selectors -->
+  <div id="flex-container">
+    <div id="content">
+      <h3 class="text" id="heading">Current conditions for:</h3>
+      <h2 class="text" id="city"></h2>
+      <h1 class="text" id="temperature">
+        <span id="degrees"></span>
+        <span id="symbol">°F</span>
+      </h1>
+      <img id="icon" alt="weather icon">
+      <h2 class="text" id="conditions"></h2>
+    </div>
+  </div>
+  <script type="module">
+    import { render } from './js/modules.js';
+    render();
+  </script>
+  <script nomodule src="js/fallback.js"></script>
+</body>
+</html>

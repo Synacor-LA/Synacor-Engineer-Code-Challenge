@@ -1,0 +1,25 @@
+{
+  "name": "synacor-engineer-code-challenge",
+  "version": "1.0.0",
+  "description": "Welcome to the Synacor LA coding challenge! In this repo you'll find [instructions](Instructions.md) for the site we'd like you to create. We've tried to be conscious of your time, so this should be a fairly quick project.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krmayer/Synacor-Engineer-Code-Challenge"
+  },
+  "author": "Kyle Mayer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krmayer/Synacor-Engineer-Code-Challenge/issues"
+  },
+  "homepage": "https://github.com/krmayer/Synacor-Engineer-Code-Challenge#readme",
+  "dependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "express": "^4.16.4",
+    "jest": "^24.5.0"
+  }
+}

@@ -1,0 +1,65 @@
+body, h1, h2, h3 {
+  /* Basic CSS reset with Roboto applied and fallbacks */
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  /* antialiasing text because it's pretty */
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+    /* hide content initially until API call completes */
+    visibility: hidden;
+}
+
+.text {
+  /* Add global margins to text elements */
+  /* Use vh property to make responsive to window sizing */
+  margin: 3vh 0;
+}
+
+#flex-container {
+  /* Use 95% of viewport to create a static height that fills the window */
+  height: 95vh;
+  /* Create a flex column in this container and justify all elements in center  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Use align items to horizontally center the only city we are rendering */
+  align-items: center;
+}
+
+#content {
+  /* Set width to 40% of viewport height so that horizontal shrinking / small windows don't ruin UI */
+  width: 40vh;
+  /* Center everything within the content container  */
+  text-align: center;
+  /* Add some cool shadows to make the city weather information pop */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#heading {
+  /* Mock-up has capitalized header */
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+#city, #conditions {
+  /* Mock-up has similar sizing for city name and conditions */
+  font-size: 36px;
+}
+
+#temperature {
+    /* Mock-up has bolded temperature number */
+  font-size: 48px;
+  font-weight: bold;
+}
+
+
+#icon {
+  /* icon asset is low res! But we need to stretch it a little */
+  width: 30%;
+  height: auto;
+}
