@@ -2,7 +2,9 @@
 
 This submission is using webpack.
 
-To run locally npm install in the synacor folder.
+To run locally npm install in the synacor folder and **npm run dev**
+
+To run test use **npm run test**
 
 To view site open synacor -> public -> index.html
 
