@@ -28,7 +28,6 @@ export const getWeather = (url, data = {}) => {
 
 export const convertToDegrees = kelvin => {
   const temp = Math.round(((kelvin - 273.15) * 9) / 5 + 32);
-  // console.log("temp: ", temp);
+
   return temp;
-  // return `${temp} '\u00B0'F`;
 };

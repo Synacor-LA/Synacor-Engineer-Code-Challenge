@@ -7,12 +7,12 @@ At Synacor, we typically build user experiences that take data from third-party 
 Build a simple JavaScript app/widget that does the following:
 
 1. Makes a `GET` request to the provided IP geolocation API, which returns a JSON
-response containing the latitude and longitude for the IP address from which the
-request originated;
+   response containing the latitude and longitude for the IP address from which the
+   request originated;
 2. Makes a subsequent request to the given weather API, which returns the current
-conditions for the latitude and longitude from the first step
+   conditions for the latitude and longitude from the first step
 3. Renders a User Interface that displays the temperature, a text description of the
-current weather conditions, an icon representing those conditions, and the city.
+   current weather conditions, an icon representing those conditions, and the city.
 
 ## The API
 
@@ -32,9 +32,10 @@ Get weather for a given latitude & longitude
 > (example: http://openweathermap.org/img/w/03n.png)
 
 ## Acceptance criteria
-* You may use any version of JavaScript/ECMAScript you like.
-* Code must be written by you, with **no libraries or dependencies**.
-* Must run in modern browsers (Chrome & Firefox are fine). Don’t worry about supporting old browsers.
-* The User Interface should fill the browser window.
-* A wireframe is attached, describing what the layout should look like. Feel free to use whatever colors, fonts, and other design elements you like. _Note: other than the requirements stated above, you won’t be judged on design._
-* **Include test coverage** for your JavaScript code. You may use any Javascript test framework you like.
+
+- You may use any version of JavaScript/ECMAScript you like.
+- Code must be written by you, with **no libraries or dependencies**.
+- Must run in modern browsers (Chrome & Firefox are fine). Don’t worry about supporting old browsers.
+- The User Interface should fill the browser window.
+- A wireframe is attached, describing what the layout should look like. Feel free to use whatever colors, fonts, and other design elements you like. _Note: other than the requirements stated above, you won’t be judged on design._
+- **Include test coverage** for your JavaScript code. You may use any Javascript test framework you like.
