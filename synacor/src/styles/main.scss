@@ -1,15 +1,8 @@
 @import "reset.scss";
 .wrapper {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto 1fr auto;
-  line-height: 23px;
-  & > * {
-    grid-column: 2 / -2;
-  }
+
   header {
-    grid-column: 1 / -1;
     height: 500px;
     margin-bottom: 20px;
     display: flex;
@@ -22,14 +15,4 @@
       text-shadow: -2px -2px 3px rgb(163, 162, 162);
     }
   }
-  footer {
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-  }
-}
-.bacon > img {
-  width: 75px;
-  display: block;
-  margin: auto;
 }

@@ -25,15 +25,8 @@ h5 {
   padding: 0; }
 
 .wrapper {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto 1fr auto;
-  line-height: 23px; }
-  .wrapper > * {
-    grid-column: 2 / -2; }
+  min-height: 100vh; }
   .wrapper header {
-    grid-column: 1 / -1;
     height: 500px;
     margin-bottom: 20px;
     display: flex;
@@ -44,13 +37,4 @@ h5 {
     .wrapper header h1 {
       font-size: 3.5em;
       text-shadow: -2px -2px 3px #a3a2a2; }
-  .wrapper footer {
-    height: 50px;
-    display: flex;
-    justify-content: flex-end; }
-
-.bacon > img {
-  width: 75px;
-  display: block;
-  margin: auto; }
 

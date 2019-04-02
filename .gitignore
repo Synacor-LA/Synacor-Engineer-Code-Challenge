@@ -8,3 +8,4 @@
 *.log
 yarn.lock
 .npmrc
+synacor/node_modules

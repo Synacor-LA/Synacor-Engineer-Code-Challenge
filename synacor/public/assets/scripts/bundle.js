@@ -90,10 +90,23 @@
 /*!*****************************!*\
   !*** ./src/scripts/main.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: URL, WEATHERURL */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./src/scripts/main.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"URL\", function() { return URL; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"WEATHERURL\", function() { return WEATHERURL; });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/scripts/utils.js\");\n\nvar cityEl = document.querySelector(\".city\");\nvar tempEl = document.querySelector(\".temperature\");\nvar iconEl = document.querySelector(\".icon\");\nvar adjectiveEl = document.querySelector(\".adjective\");\nvar URL = \"https://weathersync.herokuapp.com/ip\";\nvar WEATHERURL = \"https://weathersync.herokuapp.com/weather\";\nvar ICONURL = \"http://openweathermap.org/img/w/\";\nObject(_utils__WEBPACK_IMPORTED_MODULE_0__[\"getIP\"])(URL).then(function (data) {\n  console.log(\"data:\", data);\n});\n\n//# sourceURL=webpack:///./src/scripts/main.js?");
+
+/***/ }),
+
+/***/ "./src/scripts/utils.js":
+/*!******************************!*\
+  !*** ./src/scripts/utils.js ***!
+  \******************************/
+/*! exports provided: getIP */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getIP\", function() { return getIP; });\nvar getIP = function getIP(url) {\n  var body = fetch(url).then(function (res) {\n    return res.json();\n  }).catch(function (err) {\n    console.log(err);\n  });\n  return body;\n};\n\n//# sourceURL=webpack:///./src/scripts/utils.js?");
 
 /***/ }),
 
