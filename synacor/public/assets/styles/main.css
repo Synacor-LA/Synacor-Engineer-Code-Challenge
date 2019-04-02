@@ -25,16 +25,40 @@ h5 {
   padding: 0; }
 
 .wrapper {
-  min-height: 100vh; }
-  .wrapper header {
-    height: 500px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+  .wrapper .content-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    color: #fff;
-    text-align: center; }
-    .wrapper header h1 {
-      font-size: 3.5em;
-      text-shadow: -2px -2px 3px #a3a2a2; }
+    border: 3px solid;
+    padding-top: 80px;
+    height: 90vh;
+    width: 90%; }
+    .wrapper .content-wrapper .title {
+      font-size: calc( 24px + (52 - 24) * (100vw - 400px) / (1600 - 400));
+      text-transform: uppercase;
+      margin: 40px 0px; }
+    .wrapper .content-wrapper .city {
+      font-size: calc( 28px + (52 - 28) * (100vw - 400px) / (1600 - 400));
+      margin: 30px 0px; }
+    .wrapper .content-wrapper .temp-wrapper {
+      display: flex;
+      align-items: center; }
+      .wrapper .content-wrapper .temp-wrapper.error {
+        display: none; }
+    .wrapper .content-wrapper .degree {
+      font-size: calc( 42px + (64 - 42) * (100vw - 400px) / (1600 - 400)); }
+    .wrapper .content-wrapper .temperature {
+      font-size: calc( 42px + (64 - 42) * (100vw - 400px) / (1600 - 400));
+      margin: 20px 0px;
+      display: inline-block; }
+    .wrapper .content-wrapper .adjective {
+      font-size: calc( 34px + (48 - 34) * (100vw - 400px) / (1600 - 400));
+      text-transform: capitalize; }
+
+.error {
+  color: red; }
 

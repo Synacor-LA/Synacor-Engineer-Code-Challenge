@@ -1,18 +1,54 @@
 @import "reset.scss";
-.wrapper {
-  min-height: 100vh;
 
-  header {
-    height: 500px;
-    margin-bottom: 20px;
+@function fontSize($min, $max) {
+  @return calc(
+    #{$min}px + (#{$max} - #{$min}) * (100vw - 400px) / (1600 - 400)
+  );
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .content-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    color: #fff;
-    text-align: center;
-    h1 {
-      font-size: 3.5em;
-      text-shadow: -2px -2px 3px rgb(163, 162, 162);
+    border: 3px solid;
+    padding-top: 80px;
+    height: 90vh;
+    width: 90%;
+    .title {
+      font-size: fontSize(24, 52);
+      text-transform: uppercase;
+      margin: 40px 0px;
+    }
+    .city {
+      font-size: fontSize(28, 52);
+      margin: 30px 0px;
+    }
+    .temp-wrapper {
+      display: flex;
+      align-items: center;
+      &.error {
+        display: none;
+      }
+    }
+    .degree {
+      font-size: fontSize(42, 64);
+    }
+    .temperature {
+      font-size: fontSize(42, 64);
+      margin: 20px 0px;
+      display: inline-block;
+    }
+    .adjective {
+      font-size: fontSize(34, 48);
+      text-transform: capitalize;
     }
   }
+}
+.error {
+  color: red;
 }
