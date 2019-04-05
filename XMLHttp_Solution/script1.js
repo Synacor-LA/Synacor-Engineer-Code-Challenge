@@ -2,7 +2,7 @@ const currentCity = document.getElementById("location");
 const currentTemperature = document.getElementById("temperature");
 const weatherIcon = document.getElementById("icon");
 const currentCondtions = document.getElementById("currentCondition");
-import { URL, WEATHER_URL } from "./api.js";
+import { URL, WEATHER_URL } from "../api";
 
 function request(url, callback) {
   const request = new XMLHttpRequest();

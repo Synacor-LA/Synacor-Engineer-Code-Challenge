@@ -1,7 +1,7 @@
 var expect = chai.expect;
 
-describe("Promise should complete operation", function(resolve) {
-  const resolvingPromise = new Cow().fetchData().then(data => {
+describe("Promise should complete operation", () => {
+  const resolvingPromise = new Proto().fetchData().then(data => {
     return data;
   });
 
