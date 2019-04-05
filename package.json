@@ -1,0 +1,15 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "Code Challenge",
+  "main": "script.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Kenneth Brisco",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "*",
+    "mocha": "*"
+  }
+}

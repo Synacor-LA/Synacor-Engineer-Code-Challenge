@@ -1,7 +1,12 @@
-# Synacor Los Angeles Engineer II Code Challenge
+Code Challenge
 
-Welcome to the Synacor LA coding challenge! In this repo you'll find [instructions](Instructions.md) for the site we'd like you to create. We've tried to be conscious of your time, so this should be a fairly quick project.
+Instructions for challenge: Open file with Live Server or extension that triggers JavaScript.
 
-To complete the challenge, make a PR against this repo with your challenge code.
+Instructions for test:
+Open test/index.html in the browser.
 
-Thanks for applying to Synacor!
+Notes:
+
+The Fetch Api uses promises and promise chains, avoiding the callback pyramid of doom || future callback hell(XMLHttp solution).
+
+Exercised implementing ES6 modules in the html script without the need for Babel or Webpack. Although I could have just inserted the url's in the fetch call, it was fun to implement.
