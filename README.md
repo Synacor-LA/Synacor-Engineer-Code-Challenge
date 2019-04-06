@@ -9,4 +9,4 @@ Notes:
 
 The Fetch Api uses promises and promise chains, avoiding the callback pyramid of doom || future callback hell(XMLHttp solution).
 
-Exercised implementing ES6 modules in the html script without the need for Babel or Webpack. Although I could have just inserted the url's in the fetch call, it was fun to implement.
+Exercised implementing ES6 modules in the html script without the need for Babel or Webpack. Although I could have just inserted the url's in the fetch call, it was good practice.
