@@ -33,8 +33,8 @@ Get weather for a given latitude & longitude
 
 ## Acceptance criteria
 * You may use any version of JavaScript/ECMAScript you like.
-* Code must be written by you, with **no libraries or dependencies**.
+* Code must be written by you, with **no libraries or dependencies** other than those required for testing.
 * Must run in modern browsers (Chrome & Firefox are fine). Don’t worry about supporting old browsers.
 * The User Interface should fill the browser window.
 * A wireframe is attached, describing what the layout should look like. Feel free to use whatever colors, fonts, and other design elements you like. _Note: other than the requirements stated above, you won’t be judged on design._
-* **Include test coverage** for your JavaScript code. You may use any Javascript test framework you like.
+* **Unit test your JavaScript code**. You may use any Javascript test framework you like.
