@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -13,7 +14,7 @@
       font-family: Tahoma, Geneva, sans-serif;
       font-weight: normal;
     }
-    .fullScreen
+    .center
     {
       margin: auto;
       text-align: center;
@@ -22,65 +23,92 @@
     {
       border: 0.25em solid black;
       height: 95%;
+      min-height: 95vh;
       margin: 1em;
     }
     .spinner
     {
+      animation: spin 2s linear infinite; 
+      border: 16px solid #f3f3f3;
+      border-top: 16px solid #3498db;
+      border-radius: 50%;
+      height: 120px;
+      margin: auto;
+      text-align: center;
+      width: 120px;
+    }
+    @keyframes spin
+    {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
-<body class="fullScreen">
+<body class="center">
   <div class="outerBorder">
     <h3 class="blockFont">
       CURRENT CONDITIONS FOR:
     </h3>
-    <h2>
-      Buffalo
-    </h2>
+    <h2 id="location"></h2>
     <h1 id="temperature">
       <div class="spinner"></div>
     </h1>
-    <div id="weatherImage">
-      insert PNG here
+    <div>
+      <img
+        class="center"
+        id="weatherImage"
+        style="display: none;">
+      </img>
     </div>
-    <h2 id="description">
-      Sunny
-    </h2>
+    <h2 id="description"></h2>
   </div>
   <script>
     function kelvinToDegrees(kelvin)
     {
-      return Math.round(
+      try
+      {
+        return Math.round(
         (
-          (
-            (kelvin - 273.15) * (9 / 5)
-          ) + 32
-        ) * 100
-      ) / 100;
+          (kelvin - 273.15) * (9 / 5)
+        ) + 32);
+      }
+      catch (error)
+      {
+        console.trace(error);
+        return 'error retrieving weather data';
+      }
+    }
+    function updateDOM(json)
+    {
+      document.getElementById('description').innerHTML =
+        json.weather[0].main;
+      document.getElementById('location').innerHTML = json.name;
+      document.getElementById('temperature').innerHTML =
+        kelvinToDegrees(json.main.temp)
+        + '&#176;F';
+      document.getElementById('weatherImage').src =
+        'http://openweathermap.org/img/w/'
+        + json.weather[0].icon
+        + '.png';
+      document.getElementById('weatherImage').style.display = 'block';
     }
     window.onload = () =>
     {
       fetch('https://weathersync.herokuapp.com/ip')
+      .then((res) => { return res.json(); })
+      .then((json) =>
+      {
+        fetch('https://weathersync.herokuapp.com/weather/'
+          + json.latitude
+          + ','
+          + json.longitude
+        )
         .then((res) => { return res.json(); })
-        .then((json) =>
-        {
-          fetch('https://weathersync.herokuapp.com/weather/'
-            + json.latitude
-            + ','
-            + json.longitude)
-            .then((res) => { return res.json(); })
-            .then((json) =>
-            {
-              document.getElementById('temperature').innerHTML =
-                kelvinToDegrees(json.main.temp)
-                + '&#176;F';
-              console.log(json);
-            })
-            .catch((error) => { console.trace(error); });
-        })
+        .then((json) => { updateDOM(json); })
         .catch((error) => { console.trace(error); });
+      })
+      .catch((error) => { console.trace(error); });
     };
   </script>
 </body>
 </html>
-
