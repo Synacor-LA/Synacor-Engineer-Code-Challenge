@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>A Web Page</title>
   <style>
     *
     {
@@ -34,17 +34,44 @@
     <h2>
       Buffalo
     </h2>
-    <h1>
+    <h1 id="temperature">
       34&#176;F
     </h1>
-    <div>
+    <div id="weatherImage">
       insert PNG here
     </div>
-    <h2>
+    <h2 id="description">
       Sunny
     </h2>
   </div>
   <script>
+    async function getData(endpoint)
+    {
+      console.log(endpoint);
+      return 'this is a response';
+    }
+    window.onload = () =>
+    {
+      console.log('page loaded');
+      /*
+      getData('https://weathersync.herokuapp.com/ip')
+        .then((res) => { console.log(res); })
+        .catch((error) => { console.trace(error); });
+        */
+      fetch('https://weathersync.herokuapp.com/ip')
+        .then((res) => { return res.json(); })
+        .then((json) =>
+        {
+          console.log(json);
+          fetch('https://weathersync.herokuapp.com/weather/?lat='
+            + json.latitude
+            + '&lng='
+            + json.longitude, { 'mode': 'cors' })
+            .then((res) => { console.log(res); })
+            .catch((error) => { console.trace(error); });
+        })
+        .catch((error) => { console.trace(error); });
+    };
   </script>
 </body>
 </html>
