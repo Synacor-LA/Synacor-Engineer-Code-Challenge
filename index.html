@@ -24,6 +24,9 @@
       height: 95%;
       margin: 1em;
     }
+    .spinner
+    {
+    }
   </style>
 </head>
 <body class="fullScreen">
@@ -35,7 +38,7 @@
       Buffalo
     </h2>
     <h1 id="temperature">
-      34&#176;F
+      <div class="spinner"></div>
     </h1>
     <div id="weatherImage">
       insert PNG here
@@ -45,29 +48,34 @@
     </h2>
   </div>
   <script>
-    async function getData(endpoint)
+    function kelvinToDegrees(kelvin)
     {
-      console.log(endpoint);
-      return 'this is a response';
+      return Math.round(
+        (
+          (
+            (kelvin - 273.15) * (9 / 5)
+          ) + 32
+        ) * 100
+      ) / 100;
     }
     window.onload = () =>
     {
-      console.log('page loaded');
-      /*
-      getData('https://weathersync.herokuapp.com/ip')
-        .then((res) => { console.log(res); })
-        .catch((error) => { console.trace(error); });
-        */
       fetch('https://weathersync.herokuapp.com/ip')
         .then((res) => { return res.json(); })
         .then((json) =>
         {
-          console.log(json);
-          fetch('https://weathersync.herokuapp.com/weather/?lat='
+          fetch('https://weathersync.herokuapp.com/weather/'
             + json.latitude
-            + '&lng='
-            + json.longitude, { 'mode': 'cors' })
-            .then((res) => { console.log(res); })
+            + ','
+            + json.longitude)
+            .then((res) => { return res.json(); })
+            .then((json) =>
+            {
+              document.getElementById('temperature').innerHTML =
+                kelvinToDegrees(json.main.temp)
+                + '&#176;F';
+              console.log(json);
+            })
             .catch((error) => { console.trace(error); });
         })
         .catch((error) => { console.trace(error); });
